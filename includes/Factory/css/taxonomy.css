@@ -1,0 +1,30 @@
+.form-field input[type="email"], 
+.form-field input[type="number"], 
+.form-field input[type="password"], 
+.form-field input[type="search"], 
+.form-field input[type="text"], 
+.form-field input[type="url"],
+input.widefat{
+    min-height: 30px;
+}
+
+input[type="checkbox"].widefat{
+	min-height: 10px;
+}
+
+.form-field input[type="checkbox"]{
+	width: auto;
+	margin: 3px 0 0 0;
+}
+
+.form-field label{
+	display: inline;
+}
+
+.form-field .widefat{
+	width: 95%;
+}
+
+.form-field td table thead tr th{
+	padding: 10px 15px;
+}
