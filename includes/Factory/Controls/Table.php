@@ -42,7 +42,7 @@ class Table extends Control{
 		$row_html  = '';	
 		$col_count = $this->columns->getCount();
 		$controls  = $this->columns->getControls();		
-		//var_dump($rows);
+
 		// =========================================================
 		// THEAD SECTION
 		// =========================================================
@@ -87,7 +87,7 @@ class Table extends Control{
         }
         $new_row[] = sprintf('<td><button type="button" class="button remove-btn" data-row-id="%s-row-__i__" onclick="removeRow(this, event);"><i class="fa fa-times"></i></button></td>', $this->name);
         $last_id = $rows ? end(array_keys($rows)) : -1;
-        return sprintf('<table id="%1$s" class="widefat" data-last-id="%4$d">%2$s %3$s</table>%5$s', $this->name, $thead, $tbody, $last_id, $this->getNewRowData($new_row));
+        return sprintf('<table id="%1$s" class="widefat" data-last-id="%4$d">%2$s %3$s</table>%5$s', $this->name, $thead, $tbody, $last_id, $this->getNewRowData($this->name, $new_row));
 	}
 
 	/**
@@ -95,7 +95,7 @@ class Table extends Control{
 	 * @param  array  $new_row --- new row elements
 	 * @return string          --- javascript variable
 	 */
-	public function getNewRowData($new_row = array())
+	public function getNewRowData($name, $new_row = array())
 	{
 		foreach ( (array) $new_row as $key => $value ) 
 		{
@@ -103,7 +103,7 @@ class Table extends Control{
 			$new_row[$key] = html_entity_decode((string) $value, ENT_QUOTES, 'UTF-8');
 		}
 
-		$script = "var new_row = " . json_encode($new_row) . ';';
+		$script = "var $name = " . json_encode($new_row) . ';';
 		return sprintf('<script type=\'text/javascript\'>/* <![CDATA[ */ %s /* ]]> */</script>', $script);
 	}
 }

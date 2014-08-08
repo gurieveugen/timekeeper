@@ -1,0 +1,833 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is_in",
+				"is_int"
+			],
+			[
+				"update",
+				"update_post_meta"
+			],
+			[
+				"reques",
+				"REQUEST_URI"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"get_cure",
+				"get_current_user_id"
+			],
+			[
+				"wp_log",
+				"wp_logout"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"fon",
+				"font"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"uc",
+				"ucwords"
+			],
+			[
+				"get_cu",
+				"get_current_user"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"get_cat",
+				"get_category"
+			],
+			[
+				"queried",
+				"queried_object"
+			],
+			[
+				"design_",
+				"design_slideshow_speed"
+			],
+			[
+				"get_current_user",
+				"get_current_user_id"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"get_post_thu",
+				"get_the_post_thumbnail"
+			],
+			[
+				"has_post",
+				"has_post_thumbnail"
+			],
+			[
+				"active",
+				"active_project"
+			],
+			[
+				"timer_start",
+				"timer_start_big"
+			],
+			[
+				"update_us",
+				"update_user_meta"
+			],
+			[
+				"update_po",
+				"update_post_meta"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"get_curren",
+				"get_current_user_id"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"getUsers",
+				"getUsersOptions"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"line",
+				"Line Endings Unify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"stop",
+				"Xdebug: Stop Debugging (Launch Browser)"
+			],
+			[
+				"start",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"star",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"sta",
+				"Xdebug: Start Debugging (Launch Browser)"
+			],
+			[
+				"xd",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"starts",
+				"Xdebug: Restart Session"
+			],
+			[
+				"x",
+				"Xdebug: Stop Debugging"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"auto",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"sq",
+				"Set Syntax: SQL"
+			],
+			[
+				"gis",
+				"Gist: Insert Gist"
+			],
+			[
+				"aot",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"gist",
+				"Gist: Insert Gist"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Gist: Insert Gist"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: $… = array (…)"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/GH/TimeKeeper/js/jquery.fs.boxer.js",
+		"/D/GH/TimeKeeper/js/moment.js",
+		"/C/Users/SeeJay/AppData/Roaming/Sublime Text 3/Packages/LineEndings/LineEndings.sublime-settings",
+		"/C/Users/SeeJay/AppData/Roaming/Sublime Text 3/Packages/User/LineEndings.sublime-settings",
+		"/D/GH/TimeKeeper/404.php",
+		"/D/GH/TimeKeeper/archive.php",
+		"/D/GH/TimeKeeper/css/jquery.fs.boxer.css",
+		"/D/GH/TimeKeeper/fonts/glyphicons-halflings-regular.svg",
+		"/D/GH/TimeKeeper/footer.php",
+		"/D/GH/TimeKeeper/front-page.php",
+		"/D/GH/TimeKeeper/header.php",
+		"/D/GH/TimeKeeper/index.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/single.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/loop.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Factory/MetaBox.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/page.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/style.css",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/functions.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/header.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/header-form.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/header-clear.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Factory/LoremPosts.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Actions.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/front-page.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/page-actions.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/page-my-projects.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/page-sign-in.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/page-sign-up.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/single-session.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Project.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/walkers.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/TimeKeeper.php",
+		"/D/webserver/www/time2/www/wp-content/themes/twentyfourteen/style.css",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Factory/Taxonomy.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Projects.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Timer.php",
+		"/D/webserver/www/time2/www/wp-config.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Factory/PostType.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/taxonomy-project.php",
+		"/D/webserver/www/time2/www/wp-includes/query.php",
+		"/D/webserver/www/time2/www/wp-includes/post.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/timekeeper.sublime-project",
+		"/D/webserver/www/time2/www/wp-settings.php",
+		"/D/webserver/www/time2/www/wp-blog-header.php",
+		"/D/webserver/www/time2/www/wp-content/themes/timekeeper/includes/Session.php",
+		"/D/webserver/www/time2/www/wp-includes/functions.php",
+		"/D/webserver/php/php.ini",
+		"/C/Users/SeeJay/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/D/webserver/www/time2/www/wp-includes/class-phpmailer.php",
+		"/C/Users/SeeJay/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/D/webserver/www/5/index.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/TimeKeeper.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Actions.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/single-session.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/functions.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/taxonomy-project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Authorization.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Projects.php",
+		"/D/webserver/apache/conf/extra/hosts",
+		"/D/webserver/apache/conf/extra/httpd-vhosts.conf",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/front-page.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-logout.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-actions.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-join-to-project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/helper.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/walkers.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/some.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Timer.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/style.css",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/js/main.js",
+		"/D/Downloads/web/wordpress/timekeeper.wordpress.2014-08-04.xml",
+		"/D/GitHub/vueson48th/js/main.js",
+		"/D/GitHub/vueson48th/functions.php",
+		"/D/GitHub/vueson48th/gallery-page.php",
+		"/D/GitHub/vueson48th/style.css",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Factory/Actions.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page.php",
+		"/D/GitHub/vueson48th/includes/GoogleMap.php",
+		"/D/GitHub/vueson48th/location-page.php",
+		"/D/GitHub/vueson48th/lifestyle-page.php",
+		"/D/GitHub/vueson48th/header.php",
+		"/D/GitHub/vueson48th/images/guide/www/book/manifest.appcache",
+		"/D/GitHub/vueson48th/js/PIE.htc",
+		"/D/GitHub/vueson48th/languages/twentythirteen.pot",
+		"/D/GitHub/vueson48th/slash/js/PIE.htc",
+		"/D/GitHub/vueson48th/images/guide/www/book/_book/SUMMARY.md",
+		"/D/GitHub/cassoa.co.uk/functions.php",
+		"/D/GitHub/cassoa.co.uk/page-member-search.php",
+		"/D/Downloads/web/wordpress/plugins/contact-form-7/includes/contact-form.php",
+		"/D/Downloads/web/wordpress/plugins/contact-form-7/includes/controller.php",
+		"/D/GitHub/vueson48th/footer.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/js/jquery.fs.boxer.js",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-allow-join.php",
+		"/D/GitHub/vueson48th/contact-page.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/css/jquery.fs.boxer.css",
+		"/D/work/backups/time/14.07.2014/timekeeper/includes/Projects.php",
+		"/D/GitHub/corillaconstruction/woocommerce/content-single-product.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-sign-in.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/boot/js/bootstrap.js",
+		"/D/tmp/14/site-archive-luxcloset-20140714-08_10_57-4BTdkxYyKJ9gzj2FGbhNCf7WpQwRXvtH6rPc/wp-content/themes/TheFurnitureStore/includes/single/single-product.php",
+		"/D/tmp/14/channel-adv-feed.php",
+		"/D/tmp/14/site-archive-luxcloset-20140714-08_10_57-4BTdkxYyKJ9gzj2FGbhNCf7WpQwRXvtH6rPc/wp-content/plugins/channel-adv-feed.php",
+		"/D/tmp/14/theluxury-rss-feed.php",
+		"/D/tmp/14/theluxury-xml-sitemap.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Factory/Controls/Table.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Factory/js/table.js",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Factory/Taxonomy.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-edit-project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-new-project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Factory/error_log",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-remove-project.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Session.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/header.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/TableGenerator.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/Gibrid.php",
+		"/D/webserver/www/site/www/list.php",
+		"/D/webserver/www/site/www/css/style.css",
+		"/D/webserver/www/site/www/index.php",
+		"/D/webserver/www/site/www/logs",
+		"/D/webserver/www/site/www/sinoptik.php",
+		"/D/webserver/www/site/www/text.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-my-projects.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/page-sign-up.php",
+		"/D/webserver/www/time/www/wp-content/themes/timekeeper/includes/SignIn.php",
+		"/D/webserver/www/site/www/js/main.js",
+		"/D/webserver/www/site/www/css/flexslider.css",
+		"/D/GitHub/imcreator_main/IM-new/page-free.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"",
+			"D:\\GitHub\\vueson48th",
+			"D:\\webserver\\www\\time\\www\\wp-content\\themes\\timekeeper",
+			"",
+			"D:\\Downloads\\web\\wordpress\\plugins\\contact-form-7",
+			"",
+			"D:\\tmp\\14\\site-archive-luxcloset-20140714-08_10_57-4BTdkxYyKJ9gzj2FGbhNCf7WpQwRXvtH6rPc",
+			"",
+			"D:\\GitHub\\vueson48th",
+			"",
+			"D:\\GitHub\\vueson48th",
+			"D:\\work\\discoverology.com\\13.01.2014\\discoverology",
+			"D:\\work\\discoverology.com\\13.01.2014\\discoverology\\js",
+			"D:\\GitHub\\Most",
+			"D:\\GitHub\\vueson48th",
+			"D:\\GitHub\\Beringer",
+			"D:\\GitHub\\vueson48th",
+			"",
+			"D:\\GitHub\\theluxury",
+			"",
+			"D:\\tmp\\10\\salesforce-wordpress-to-lead",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"add_theme_page()",
+			"lorempos",
+			"twentytwelve",
+			"template-url",
+			"theme_default_content",
+			"themeDefaultContent",
+			"templateUrl",
+			"<?",
+			"template_url",
+			"cheange_menu_classes",
+			"theme_entry_meta",
+			"theme_entry_date",
+			"theme_post_nav",
+			"theme_paging_nav",
+			"themePostNav()",
+			"theme_paging_nav",
+			"theme_entry_meta",
+			"logo.png\"",
+			"<img",
+			"title=\"Guriev Creative\"",
+			"alt=\"Guriev Creative\"",
+			"logout",
+			"$row_class",
+			"_e\\(.*?\\);",
+			"__\\(.*?\\),",
+			"__(",
+			"$css_class",
+			"post_type_name",
+			"$post_type_name",
+			"TaymKiiper",
+			"get_permalink()",
+			"strtok($_SERVER[\"REQUEST_URI\"], '?');",
+			"strtok($_SERVER[\"REQUEST_URI\"],'?');",
+			"trtok($_SERVER[\"REQUEST_URI\"],'?');",
+			"%s?",
+			"?",
+			"getRemoveWorkersPanel",
+			"get_bloginfo('url').",
+			"'Edit'",
+			"Edit",
+			"var_dump",
+			"createMenus",
+			"xdebug.remote_enable",
+			"createPages",
+			"access-denied-allow",
+			"access-denied-session",
+			"access-denied",
+			"URL_SIGN_UP",
+			"URL_SIGN_IN",
+			"PAGE_SIGN_IN",
+			"URL_SIGN_UP",
+			"self::URL_SIGN_IN",
+			"URL_SIGN_IN",
+			"URL_LOST_PASSWORD",
+			"PAGE_EDIT_PROJECT",
+			"PAGE_ACCESS_DENIED_ALLOW",
+			"access-denied-allow",
+			"accessDeniedAllow",
+			"getActionsURL",
+			"Projects::getActionsURL()",
+			"PAGE_ACTIONS",
+			"accessDeniedProject",
+			"PAGE_ACCESS_DENIED_ALLOW",
+			"'/'.TimeKeeper::PAGE_EDIT_PROJECT",
+			"'/'.TimeKeeper::PAGE_ACTIONS",
+			"'/'.TimeKeeper::PAGE_SIGN_UP",
+			"'/'.TimeKeeper::PAGE_SIGN_IN",
+			"'/'.TimeKeeper::PAGE_MY_PROJECTS",
+			"'/'.TimeKeeper::PAGE_NEW_PROJECT",
+			"TimeKeeper::PAGE_LOGOUT",
+			"'/'.TimeKeeper::PAGE_LOGOUT",
+			"'/'.TimeKeeper::PAGE_ACTIONS",
+			"TimeKeeper::",
+			"TimeKeeper::getPageLink(",
+			"'/'.TimeKeeper::getPageLink",
+			"self::PAGE_EDIT_PROJECT",
+			"self::PAGE_ACTIONS",
+			"self::PAGE_SIGN_UP",
+			"self::PAGE_SIGN_IN",
+			"self::PAGE_MY_PROJECTS",
+			"self::PAGE_NEW_PROJECT",
+			"self::PAGE_LOGOUT",
+			"PAGE_LOGOUT",
+			"site",
+			"Projects::PAGE_ACTIONS",
+			"PAGE_ACTIONS",
+			"USER_PROJECTS",
+			"user_projects",
+			"USER_PROJECTS",
+			"user_projects",
+			"USER_PROJECTS",
+			"PAGE_EDIT_PROJECT",
+			"PAGE_REMOVE_PROJECT",
+			"PAGE_JOIN_TO_PROJECT",
+			"PAGE_ALLOW_JOIN",
+			"self::PAGE_ACTIONS",
+			"self::PAGE_REMOVE_PROJECT",
+			"PAGE_REMOVE_PROJECT",
+			"self::PAGE_ALLOW_JOIN",
+			"PAGE_ALLOW_JOIN",
+			"$_GET",
+			"PAGE_JOIN_TO_PROJECT",
+			"JOIN_TO_PROJECT",
+			"PAGE_SIGN_UP",
+			"PAGE_MY_PROJECTS",
+			"var_dump",
+			"'/'",
+			"PAGE_LOGOUT",
+			"self::PAGE_LOTOUT",
+			"\\[.*\\]",
+			"//.*",
+			"menu-item-icon_class",
+			"menu-item-classes",
+			"icon_class",
+			"$menu['id']",
+			"$menu",
+			"$menu_id",
+			"$items",
+			"$menu",
+			"defaults",
+			"Metabox",
+			"$this->base_object",
+			"PAGE_EDIT_PROJECT",
+			"Timer(",
+			"$cost",
+			"$qo",
+			"$cost",
+			"getTotalSpendTime"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"templateUrl",
+			"cheangeMenuClasses",
+			"themeEntryMeta",
+			"themeEntryDate",
+			"themePostNav",
+			"themePagingNav",
+			"theme_post_nav();",
+			"themePagingNav",
+			"logo.png\" alt=\"Guriev Creative\"",
+			"",
+			"title=\"Guriev Creative\"",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_EDIT_PROJECT)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_ACTIONS)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_SIGN_UP)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_SIGN_IN)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_MY_PROJECTS)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_NEW_PROJECT)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_LOGOUT)",
+			"TimeKeeper::getPageLink(TimeKeeper::PAGE_ACTIONS)",
+			"TimeKeeper::getPageLink",
+			"TimeKeeper::getPageLink(self::PAGE_EDIT_PROJECT)",
+			"TimeKeeper::getPageLink(self::PAGE_ACTIONS)",
+			"TimeKeeper::getPageLink(self::PAGE_SIGN_UP)",
+			"TimeKeeper::getPageLink(self::PAGE_SIGN_IN)",
+			"TimeKeeper::getPageLink(self::PAGE_MY_PROJECTS)",
+			"TimeKeeper::getPageLink(self::PAGE_NEW_PROJECT)",
+			"TimeKeeper::getPageLink(self::PAGE_LOGOUT)",
+			"isAllowWorker",
+			"Directions for the vueson48th.com",
+			"Timer::SPEND_TIME",
+			"Timer::TIMER_STOP",
+			"Timer::TIMER_START",
+			"TIMER_START"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 100.0
+	},
+	"project": "timekeeper.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"198":
+				{
+					"group": 0,
+					"index": 9
+				},
+				"199":
+				{
+					"group": 0,
+					"index": 11
+				},
+				"200":
+				{
+					"group": 0,
+					"index": 10
+				},
+				"208":
+				{
+					"group": 0,
+					"index": 12
+				},
+				"216":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"217":
+				{
+					"group": 0,
+					"index": 13
+				},
+				"253":
+				{
+					"group": 0,
+					"index": 14
+				},
+				"298":
+				{
+					"group": 0,
+					"index": 15
+				},
+				"44":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"60":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"84":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"85":
+				{
+					"group": 0,
+					"index": 8
+				},
+				"86":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"89":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"90":
+				{
+					"group": 0,
+					"index": 7
+				},
+				"91":
+				{
+					"group": 0,
+					"index": 2
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						2,
+						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.68603286385,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.7,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 527.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

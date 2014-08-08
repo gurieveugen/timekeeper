@@ -4,12 +4,14 @@ jQuery(document).ready(function(){
 	// =========================================================
 	jQuery('.add-table-item').click(function(e){
 		var table   = jQuery(this).parent().parent().parent().parent();		
+		var name    = table.attr('id');
 		var last_id = parseInt(table.data('lastId'))+1; 
 		var tr      = '<tr id="' + table.attr('id') + '-row-' + last_id  + '">';
-		
+		var new_row = eval(name);
+
 		for (var i = 0; i < new_row.length; i++) 
 		{	
-			tr += window.new_row[i].split('__i__').join(last_id);			
+			tr += new_row[i].split('__i__').join(last_id);			
 		}
 		tr += '</tr>';
 		

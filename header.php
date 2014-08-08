@@ -13,20 +13,25 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );  wp_head(); ?>
 </head>
-<body class="background-default">
+<body <?php body_class("background-default"); ?>>
 	<header id="header" class="header">		
 			<?php
 			$defaults = array(
-				'menu'       => 'primary_nav',				
-				'container'  => false,
-				'walker'     => new GCViewWalker()
+				'theme_location' => 'primary_nav',				
+				'container'      => false,
+				'walker'         => new GCViewWalker()
+			);
+			$defaults_right = array(
+				'theme_location' => 'primary_nav_right',
+				'menu_class'     => 'pull-right',				
+				'container'      => false,
+				'walker'         => new GCViewWalker()
 			);
 
-			wp_nav_menu( $defaults );
-			?>			
-			<ul class="pull-right">
-				<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-19"><a href="/wp-login.php?action=logout&amp;_wpnonce=c24e6bbc9d"><i class="fa fa-power-off "></i> <span>Logout</span> </a></li>
-			</ul>	
+			wp_nav_menu($defaults);
+			wp_nav_menu($defaults_right);
+			
+			?>						
 	</header><!-- /header -->
 	<section class="main">
 	

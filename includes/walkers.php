@@ -52,13 +52,13 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	    {
 	        $classes[] = 'menu-item-invalid';
 	        /* translators: %s: title of menu item which is invalid */
-	        $title = sprintf( __( '%s (Invalid)' ), $item->title );
+	        $title = sprintf( __( '%s (Invalid)' , 'TimeKeer'), $item->title );
 	    } 
 	    elseif ( isset( $item->post_status ) && 'draft' == $item->post_status ) 
 	    {
 	        $classes[] = 'pending';
 	        /* translators: %s: title of menu item in draft status */
-	        $title = sprintf( __('%s (Pending)'), $item->title );
+	        $title = sprintf( __('%s (Pending)', 'TimeKeer'), $item->title );
 	    }
 	
 	    $title = empty( $item->label ) ? $title : $item->label;
@@ -82,7 +82,7 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	                                ),
 	                                'move-menu_item'
 	                            );
-	                        ?>" class="item-move-up"><abbr title="<?php esc_attr_e('Move up'); ?>">&#8593;</abbr></a>
+	                        ?>" class="item-move-up"><abbr title="<?php esc_attr_e('Move up', 'TimeKeeper'); ?>">&#8593;</abbr></a>
 	                        |
 	                        <a href="<?php
 	                            echo wp_nonce_url(
@@ -95,11 +95,11 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	                                ),
 	                                'move-menu_item'
 	                            );
-	                        ?>" class="item-move-down"><abbr title="<?php esc_attr_e('Move down'); ?>">&#8595;</abbr></a>
+	                        ?>" class="item-move-down"><abbr title="<?php esc_attr_e('Move down', 'TimeKeeper'); ?>">&#8595;</abbr></a>
 	                    </span>
-	                    <a class="item-edit" id="edit-<?php echo $item_id; ?>" title="<?php esc_attr_e('Edit Menu Item'); ?>" href="<?php
+	                    <a class="item-edit" id="edit-<?php echo $item_id; ?>" title="<?php esc_attr_e('Edit Menu Item', 'TimeKeeper'); ?>" href="<?php
 	                        echo ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? admin_url( 'nav-menus.php' ) : add_query_arg( 'edit-menu-item', $item_id, remove_query_arg( $removed_args, admin_url( 'nav-menus.php#menu-item-settings-' . $item_id ) ) );
-	                    ?>"><?php _e( 'Edit Menu Item' ); ?></a>
+	                    ?>"><?php _e( 'Edit Menu Item' , 'TimeKeeper'); ?></a>
 	                </span>
 	            </dt>
 	        </dl>
@@ -108,46 +108,46 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	            <?php if( 'custom' == $item->type ) : ?>
 	                <p class="field-url description description-wide">
 	                    <label for="edit-menu-item-url-<?php echo $item_id; ?>">
-	                        <?php _e( 'URL' ); ?><br />
+	                        <?php _e( 'URL' , 'TimeKeeper'); ?><br />
 	                        <input type="text" id="edit-menu-item-url-<?php echo $item_id; ?>" class="widefat code edit-menu-item-url" name="menu-item-url[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->url ); ?>" />
 	                    </label>
 	                </p>
 	            <?php endif; ?>
 	            <p class="description description-thin">
 	                <label for="edit-menu-item-title-<?php echo $item_id; ?>">
-	                    <?php _e( 'Navigation Label' ); ?><br />
+	                    <?php _e( 'Navigation Label' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-title" name="menu-item-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->title ); ?>" />
 	                </label>
 	            </p>
 	            <p class="description description-thin">
 	                <label for="edit-menu-item-attr-title-<?php echo $item_id; ?>">
-	                    <?php _e( 'Title Attribute' ); ?><br />
+	                    <?php _e( 'Title Attribute' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-attr-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-attr-title" name="menu-item-attr-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->post_excerpt ); ?>" />
 	                </label>
 	            </p>
 	            <p class="field-link-target description">
 	                <label for="edit-menu-item-target-<?php echo $item_id; ?>">
 	                    <input type="checkbox" id="edit-menu-item-target-<?php echo $item_id; ?>" value="_blank" name="menu-item-target[<?php echo $item_id; ?>]"<?php checked( $item->target, '_blank' ); ?> />
-	                    <?php _e( 'Open link in a new window/tab' ); ?>
+	                    <?php _e( 'Open link in a new window/tab' , 'TimeKeeper'); ?>
 	                </label>
 	            </p>
 	            <p class="field-css-classes description description-thin">
 	                <label for="edit-menu-item-classes-<?php echo $item_id; ?>">
-	                    <?php _e( 'CSS Classes (optional)' ); ?><br />
+	                    <?php _e( 'CSS Classes (optional)' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-classes-<?php echo $item_id; ?>" class="widefat code edit-menu-item-classes" name="menu-item-classes[<?php echo $item_id; ?>]" value="<?php echo esc_attr( implode(' ', $item->classes ) ); ?>" />
 	                </label>
 	            </p>
 	            <p class="field-xfn description description-thin">
 	                <label for="edit-menu-item-xfn-<?php echo $item_id; ?>">
-	                    <?php _e( 'Link Relationship (XFN)' ); ?><br />
+	                    <?php _e( 'Link Relationship (XFN)' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-xfn-<?php echo $item_id; ?>" class="widefat code edit-menu-item-xfn" name="menu-item-xfn[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->xfn ); ?>" />
 	                </label>
 	            </p>
 	            <p class="field-description description description-wide">
 	                <label for="edit-menu-item-description-<?php echo $item_id; ?>">
-	                    <?php _e( 'Description' ); ?><br />
+	                    <?php _e( 'Description' , 'TimeKeeper'); ?><br />
 	                    <textarea id="edit-menu-item-description-<?php echo $item_id; ?>" class="widefat edit-menu-item-description" rows="3" cols="20" name="menu-item-description[<?php echo $item_id; ?>]"><?php echo esc_html( $item->description ); // textarea_escaped ?></textarea>
-	                    <span class="description"><?php _e('The description will be displayed in the menu if the current theme supports it.'); ?></span>
+	                    <span class="description"><?php _e('The description will be displayed in the menu if the current theme supports it.', 'TimeKeeper'); ?></span>
 	                </label>
 	            </p>        
 	            <?php
@@ -155,13 +155,13 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	            ?> 
 	            <p class="field-custom description description-wide">
 	                <label for="edit-menu-item-icon_class-<?php echo $item_id; ?>">
-	                    <?php _e( 'Icon CSS Class' ); ?><br />
+	                    <?php _e( 'Icon CSS Class' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-icon_class-<?php echo $item_id; ?>" class="widefat code edit-menu-item-custom" name="menu-item-icon_class[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->icon_class ); ?>" />
 	                </label>
 	            </p>
 	            <p class="field-custom description description-wide">
 	                <label for="edit-menu-item-css_class-<?php echo $item_id; ?>">
-	                    <?php _e( 'Menu CSS Class' ); ?><br />
+	                    <?php _e( 'Menu CSS Class' , 'TimeKeeper'); ?><br />
 	                    <input type="text" id="edit-menu-item-css_class-<?php echo $item_id; ?>" class="widefat code edit-menu-item-custom" name="menu-item-css_class[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->css_class ); ?>" />
 	                </label>
 	            </p>
@@ -171,7 +171,7 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	            <div class="menu-item-actions description-wide submitbox">
 	                <?php if( 'custom' != $item->type && $original_title !== false ) : ?>
 	                    <p class="link-to-original">
-	                        <?php printf( __('Original: %s'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
+	                        <?php printf( __('Original: %s', 'TimeKeer'), '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
 	                    </p>
 	                <?php endif; ?>
 	                <a class="item-delete submitdelete deletion" id="delete-<?php echo $item_id; ?>" href="<?php
@@ -184,8 +184,8 @@ class GCEditWalker extends Walker_Nav_Menu  {
 	                        remove_query_arg($removed_args, admin_url( 'nav-menus.php' ) )
 	                    ),
 	                    'delete-menu_item_' . $item_id
-	                ); ?>"><?php _e('Remove'); ?></a> <span class="meta-sep"> | </span> <a class="item-cancel submitcancel" id="cancel-<?php echo $item_id; ?>" href="<?php echo esc_url( add_query_arg( array('edit-menu-item' => $item_id, 'cancel' => time()), remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) ) ) );
-	                    ?>#menu-item-settings-<?php echo $item_id; ?>"><?php _e('Cancel'); ?></a>
+	                ); ?>"><?php _e('Remove', 'TimeKeeper'); ?></a> <span class="meta-sep"> | </span> <a class="item-cancel submitcancel" id="cancel-<?php echo $item_id; ?>" href="<?php echo esc_url( add_query_arg( array('edit-menu-item' => $item_id, 'cancel' => time()), remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) ) ) );
+	                    ?>#menu-item-settings-<?php echo $item_id; ?>"><?php _e('Cancel', 'TimeKeeper'); ?></a>
 	            </div>
 	
 	            <input class="menu-item-data-db-id" type="hidden" name="menu-item-db-id[<?php echo $item_id; ?>]" value="<?php echo $item_id; ?>" />
@@ -219,7 +219,7 @@ class GCViewWalker extends Walker_Nav_Menu
 		// =========================================================
 		if($_SERVER['REQUEST_URI'] == '/')
 		{
-			$arr = array_flip($item->classes);
+			if(is_array($item->classes)) $arr = array_flip($item->classes);
 			if(isset($arr['current_page_item'])) unset($item->classes[$arr['current_page_item']]);
 		}
 		
@@ -238,7 +238,14 @@ class GCViewWalker extends Walker_Nav_Menu
 		$description = ! empty( $item->title ) ? '<span>'.$item->title.'</span>' : '';
 		
 		if($item->icon_class != "") $icon_class = '<i class="'.$item->icon_class.'"></i> ';
-		if($item->css_class != "") $css_class = ' class="'.$item->css_class.'" '; 
+		if($item->css_class != "") 
+		{
+			$css_class = ' class="'.$item->css_class.'" '; 
+		}
+		else
+		{
+			$css_class = '';
+		}
 		$item_output  = $args->before;
 		$item_output .= '<a'. $attributes.$css_class.'>';
 		$item_output .= $args->link_before.$icon_class.$append;		

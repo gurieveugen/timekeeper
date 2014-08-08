@@ -43,7 +43,7 @@ class PostType extends Factory{
 
 		$this->options = array_merge($defaults, $options);
 
-		if(!post_type_exists($this->post_type_name))
+		if(!post_type_exists($this->post_type))
 		{
 		    $this->init(array(&$this, 'registerPostType'));    
 		}

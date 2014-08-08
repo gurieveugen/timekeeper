@@ -21,7 +21,7 @@
 			<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	
 			<div class="entry-meta">
-				<?php theme_entry_meta(); ?>
+				<?php themeEntryMeta(); ?>
 				<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 		</header>
@@ -50,7 +50,7 @@
 <?php endwhile; ?>
 </div> <!-- .posts-holder -->
 	
-<?php theme_paging_nav(); ?>
+<?php themePagingNav(); ?>
 
 <?php else: ?>
 	

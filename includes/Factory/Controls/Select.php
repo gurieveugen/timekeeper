@@ -20,7 +20,7 @@ class Select extends Control{
 	 * @return string        --- HTML code
 	 */
 	public function getHtml($value = '')
-	{
+	{		
 		$args = array(
 			'name'    => $this->name,
 			'id'      => $this->name,

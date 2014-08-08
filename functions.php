@@ -12,7 +12,7 @@ require_once 'includes/walkers.php';
 // USE
 // =========================================================
 use Factory\PostType;
-use Factory\Metabox;
+use Factory\MetaBox;
 use Factory\Taxonomy;
 use Factory\Controls\ControlsCollection;
 use Factory\Controls\Text;
@@ -25,7 +25,6 @@ use Factory\Controls\Table;
 // CONSTANTS
 // =========================================================
 define('TDU', get_bloginfo('template_url'));
-
 // =========================================================
 // HOOKS
 // =========================================================
@@ -70,10 +69,12 @@ register_sidebar(array(
 	'before_title'  => '<h4>',
 	'after_title'   => '</h4>'));
 
-register_nav_menus( array(
-	'primary_nav' => __('Primary Navigation', 'theme'),
-	'top_nav'     => __('Top Navigation', 'theme'),
-	'bottom_nav'  => __('Bottom Navigation', 'theme')));
+register_nav_menus( 
+	array(
+		TimeKeeper::MENU_LOCATION_PRIMARY       => __('Primary Navigation', 'theme'),
+		TimeKeeper::MENU_LOCATION_PRIMARY_RIGHT => __('Primary Navigation (RIGHT)', 'theme')		
+	)
+);
 
 // =========================================================
 // CUSTOM POST TYPEs
@@ -83,27 +84,39 @@ $GLOBALS['gc_session']['pt'] = new PostType('session', array('icon_code' => 'f01
 // =========================================================
 // CUSTOM META BOX'S
 // =========================================================
-$table_controls = new ControlsCollection(array(
-	new Text('Some title'),
-	new Text('Some title 2', array('name' => 'namename', 'description' => 'description')),
-	new Checkbox('Some checkbox'),
-	new Textarea('Some textarea'),
-	new Select('Some select control', array('options' => array('Fist option', 'Second option', 'Third option')))
-	));
 $additional_options_ctrls = new ControlsCollection(array(
-	new Text('Some title'),
-	new Text('Some title 2', array('name' => 'namename', 'description' => 'description')),
-	new Checkbox('Some checkbox'),
-	new Textarea('Some textarea'),
-	new Select('Some select control', array('options' => array('Fist option', 'Second option', 'Third option'))),
-	new Table('Some table', array('columns' => $table_controls))
+	new Text('Start time'),
+	new Text('Stop time'),
+	new Text('Spend time')	
 	));
 
 $GLOBALS['gc_session']['mb'] = new MetaBox('session', 'Additional options', $additional_options_ctrls);
 // =========================================================
 // CUSTOM TAXONOMIES
 // =========================================================
-$GLOBALS['gc_session']['t'] = new Taxonomy('session', 'Project', array(), $additional_options_ctrls);
+$workers_table_controls = new ControlsCollection(array(
+	new Select('User', array('options' => getUsersOptions())),
+	new Text('Cost')
+));
+
+$join_table_controls = new ControlsCollection(array(
+	new Select('User ID', array('options' => getUsersOptions())),
+	new Text('Cost')
+));
+
+$taxonomy_controls = new ControlsCollection(array(	
+	new Table('Workers', array('columns' => $workers_table_controls)),
+	new Table('Joins', array('columns' => $join_table_controls)),
+	new Text('Owner'),
+	new Text('Create date')
+));
+
+$GLOBALS['gc_session']['t'] = new Taxonomy('session', 'Project', array(), $taxonomy_controls);
+
+// =========================================================
+// TimeKeeper
+// =========================================================
+$GLOBALS['timekeeper'] = new TimeKeeper();
 
 /**
  * Theme helper 
@@ -192,7 +205,7 @@ function themeEntryMeta()
 		echo '<span class="featured-post">' . __( 'Sticky', 'theme' ) . '</span>';
 
 	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
-		theme_entry_date();
+		themeEntryDate();
 
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'theme' ) );
@@ -249,12 +262,17 @@ function scriptsMethod()
 	wp_enqueue_style('main', get_bloginfo('stylesheet_url'));
 	wp_enqueue_style('open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,cyrillic,latin-ext');
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+	wp_enqueue_style('boxer', TDU.'/css/jquery.fs.boxer.css');
 	// =========================================================
 	// SCRIPTS
 	// =========================================================
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('main', TDU.'/js/main.js', array('jquery'));
+	wp_enqueue_script('moment', TDU.'/js/moment.js');
+	wp_enqueue_script('boxer', TDU.'/js/jquery.fs.boxer.js');	
+
 	wp_localize_script('main', 'defaults', array( 
+			'site'    => get_bloginfo('url'),
 			'ajaxurl' => TDU.'/includes/ajax.php',
 			'tdu'     => TDU));
 }
@@ -291,12 +309,12 @@ function gcAddCustomNavFields($menu_item)
  */
 function gcUpdateCustomNavFields($menu_id, $menu_item_db_id, $args) 
 {     
-    if (is_array($_REQUEST['menu-item-icon_class'])) 
+    if (isset($_REQUEST['menu-item-icon_class']) AND is_array($_REQUEST['menu-item-icon_class'])) 
     {
         $icon_class_value = $_REQUEST['menu-item-icon_class'][$menu_item_db_id];
         update_post_meta($menu_item_db_id, '_menu_item_icon_class', $icon_class_value);
     }
-    if (is_array($_REQUEST['menu-item-css_class'])) 
+    if (isset($_REQUEST['menu-item-icon_class']) AND is_array($_REQUEST['menu-item-css_class'])) 
     {
         $css_class_value = $_REQUEST['menu-item-css_class'][$menu_item_db_id];
         update_post_meta($menu_item_db_id, '_menu_item_css_class', $css_class_value);
@@ -314,21 +332,85 @@ function gcEditWalker($walker, $menu_id)
 	return 'GCEditWalker';
 }
 
-
-function exportWorkers($workers)
+/**
+ * Get user options for select control
+ * Like this:
+ * array( 
+ * array('{ID}', '{display_name}'),
+ * array('{ID}', '{display_name}')
+ * );
+ * @return array
+ */
+function getUsersOptions()
 {
-	$out = null;
-	if($workers)
-	{
-		$workers = explode(',', $workers);
-		if(count($workers))
+	$args = array(
+		'blog_id'      => $GLOBALS['blog_id'],
+		'role'         => '',
+		'meta_key'     => '',
+		'meta_value'   => '',
+		'meta_compare' => '',
+		'meta_query'   => array(),
+		'include'      => array(),
+		'exclude'      => array(),
+		'orderby'      => 'login',
+		'order'        => 'ASC',
+		'offset'       => '',
+		'search'       => '',
+		'number'       => '',
+		'count_total'  => false,
+		'fields'       => 'all',
+		'who'          => '');
+	$users   = get_users($args);
+	$options = array();
+	if($users)
+	{		
+		foreach ($users as $u) 
 		{
-			foreach ($workers as $worker) 
-			{				
-				$worker_obj   = get_user_by('id', trim($worker));
-				$out[$worker] = $worker_obj->data->display_name;
-			}
+			$options[] = array($u->data->ID, $u->data->display_name);
 		}
 	}
-	return $out;
+	return $options;
+}
+
+/**
+ * Export workers array
+ * with cost and ID
+ * @param  array $arr --- users
+ * @return mixed      --- Workers [array] | false [boolean]
+ */
+function exportWorkers($arr)
+{	
+	if(!$arr) return false;
+
+	$res = array();
+	foreach ((array)$arr as $val) 
+	{		
+		$u = get_user_by('id', $val['user']);
+		
+		if($u)
+		{
+			$res[$u->data->ID] = sprintf('%s (<b>%s $</b>)', $u->data->display_name, $val['cost']);
+		}
+	}
+	return $res;
+}
+
+
+/**
+ * Get seesion project
+ * @param  integer $session_id --- session id
+ * @return mixed               --- project [object] | false [boolean]
+ */
+function getSessionProject($session_id)
+{
+	$terms = wp_get_post_terms($session_id, 'project');
+	if($terms)
+	{
+		return $terms[0];
+	}
+	else return false;
+}
+
+if ( ! isset( $content_width ) ) {
+	$content_width = 1200;
 }

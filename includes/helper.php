@@ -29,64 +29,18 @@ function getSelectCtrl($args, $values)
 
 	foreach ($values as &$value) 
 	{
-		$options.= sprintf('<option value="%1$s" %2$s>%1$s</option>', $value, selected($value, $current, false));
-	}
-
-	return sprintf('<select name="%s" id="%s" class="%s">%s</select>', $name, $id, $class, $options);
-}
-
-/**
- * Generate table from array
- * @param  array $body_items
- * @param  array $header_items
- * @param  array  $args
- * @return mixed --- html code [string] | false [boolean]
- */
-function generateTable($body_items, $header_items = null, $args = array())
-{
-	if(!$body_items) return false;
-	$defaults = array(
-		'id'    => '',
-		'class' => 'table w100p'
-		);
-
-	$args = array_merge($defaults, $args);
-	extract($args);
-	
-	$middle = $header_items ? sprintf('<thead>%s</thead>', generateTableRows($header_items, array('col_container' => 'th'))) : '';
-	$middle.= sprintf('<tbody>%s</tbody>', generateTableRows($body_items));
-	$out    = sprintf('<table id="%s" class="%s">%s</table>', $id, $class, $middle);
-	
-    return $out;
-}	
-
-/**
- * Generate table rows from array
- * @param  array $arr  --- row items
- * @param  array $args --- wrap options 
- * @return mixed       --- string | boolean
- */
-function generateTableRows($arr, $args = array())
-{
-	if(!$arr) return false;
-	$defaults = array(
-		'row_container' => 'tr',
-		'col_container' => 'td'
-		);
-	$args = array_merge($defaults, $args);
-	$out  = '';
-
-	extract($args);
-	foreach ($arr as $row) 
-	{
-		$our.= sprintf('<%s>', $row_container);		
-		foreach ($row as $col) 
+		if(is_array($value))
 		{
-			$out.= sprintf('<%1$s>%2$s</%1$s>', $col_container, $col);
+			$options.= sprintf('<option value="%1$s" %2$s>%3$s</option>', $value[0], selected($value[0], $current, false), $value[1]);
 		}
-		$out.= sprintf('</%s>', $row_container);
+		else
+		{
+			$options.= sprintf('<option value="%1$s" %2$s>%1$s</option>', $value, selected($value, $current, false));	
+		}
+		
 	}
-	return $out;
+
+	return sprintf('<select name="%s" autocomplete="off" id="%s" class="%s">%s</select>', $name, $id, $class, $options);
 }
 
 /**
@@ -101,15 +55,17 @@ _session_start();
 /**
  * Auto load all Factory classes
  */
-function Autoloader($class) 
-{		
-	$path = sprintf('%s%s.php', plugin_dir_path(__FILE__), $class);		
+function autoloader($class) 
+{			
+	$path = sprintf('%s%s.php', plugin_dir_path(__FILE__), $class);	
+	$path = str_replace('\\', '/', $path);	
+	
 	if (file_exists($path))
 	{
 		require_once $path;
     }	
 }
-spl_autoload_register('Autoloader');
+spl_autoload_register('autoloader');
 
 /**
  * Get url from path
@@ -118,6 +74,7 @@ spl_autoload_register('Autoloader');
  */
 function getCurrentUrl($file)
 {
+	
 	// Get correct URL and path to wp-content
 	$content_url = untrailingslashit(dirname(dirname(get_stylesheet_directory_uri())));
 	$content_dir = untrailingslashit(dirname(dirname(get_stylesheet_directory())));
@@ -130,3 +87,30 @@ function getCurrentUrl($file)
 	return $url;
 }
 
+/**
+ * Fill array
+ * @param  array $fields --- fields array
+ * @param  array $arr    --- array with values
+ * @return mixed         --- filled [array] | false [boolean]
+ */
+function arrayFill($fields, $arr)
+{
+	if(!$fields) return false;
+	foreach ($fields as $field) 
+	{
+		$new_arr[$field] = isset($arr[$field]) ? $arr[$field] : '';
+	}
+	return $new_arr;
+}
+
+
+function isValidDateTime($dateTime)
+{
+    if (preg_match("/^(\d{4})-(\d{2})-(\d{2}) ([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/", $dateTime, $matches)) {
+        if (checkdate($matches[2], $matches[3], $matches[1])) {
+            return true;
+        }
+    }
+
+    return false;
+}

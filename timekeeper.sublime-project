@@ -1,0 +1,16 @@
+{
+	"settings":
+	{
+		"xdebug":
+		{
+			"close_on_stop": true,
+			"path_mapping":
+			{
+				"/absolute/path/to/file/on/server": "d:/webserver/",
+				"/var/www/htdocs/example/": "d:/webserver/time2/www"
+			},
+			"super_globals": true,
+			"url": "http://time2.loc"
+		}
+	}
+}

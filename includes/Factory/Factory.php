@@ -8,8 +8,7 @@ abstract class Factory{
 	//   / /_/ / /  / /_/ / /_/ /  __/ /  / /_/ /  __(__  ) 
 	//  / .___/_/   \____/ .___/\___/_/   \__/_/\___/____/  
 	// /_/              /_/                                 
-	protected $post_type;
-    protected $fiel_url;
+	protected $post_type;    
 
 	//                    __  __              __    
 	//    ____ ___  ___  / /_/ /_  ____  ____/ /____
